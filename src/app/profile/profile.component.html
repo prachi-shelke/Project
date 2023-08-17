@@ -1,0 +1,12 @@
+<div *ngFor="let profile of profiles" class="profile-card">
+    <img [src]="profile.photo" alt="Profile Photo">
+    <h2>{{ profile.name }}</h2>
+    <p>{{ profile.description }}</p>
+  
+    <button (click)="showSummary(profile)">Summary</button>
+  
+    <div class="map-container">
+      <app-map [latitude]="profile.latitude" [longitude]="profile.longitude"></app-map>
+    </div>
+    <button (click)="navigateToProfileDetail(profile.id)">Summary</button>
+  </div>

@@ -1,0 +1,9 @@
+<!-- Parent component template -->
+<div *ngFor="let profile of profiles">
+    <!-- Profile Card Content -->
+    <button (click)="showSummary(profile)">Summary</button>
+   <!-- Parent component template -->
+<app-map [latitude]="profile.latitude" [longitude]="profile.longitude" [profiles]="profiles" (showSummary)="showSummary($event)"></app-map>
+
+  </div>
+  

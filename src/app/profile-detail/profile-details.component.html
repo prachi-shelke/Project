@@ -1,0 +1,9 @@
+<div *ngIf="profile">
+    <h2>{{ profile.name }}</h2>
+    <img [src]="profile.photo" alt="Profile Photo">
+    <p>{{ profile.description }}</p>
+    <!-- Additional profile details -->
+    <div class="map-container">
+      <app-map [latitude]="profile.latitude" [longitude]="profile.longitude"></app-map>
+    </div>
+  </div>
